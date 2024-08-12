@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A69EF5B2C65425E00B3B86D /* QuickScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69EF5A2C65425E00B3B86D /* QuickScannerApp.swift */; };
-		3A69EF5D2C65425E00B3B86D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69EF5C2C65425E00B3B86D /* ContentView.swift */; };
 		3A69EF5F2C65425F00B3B86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A69EF5E2C65425F00B3B86D /* Assets.xcassets */; };
 		3A69EF632C65425F00B3B86D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A69EF622C65425F00B3B86D /* Preview Assets.xcassets */; };
+		3A69EF6E2C6547A200B3B86D /* QSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69EF6D2C6547A200B3B86D /* QSViewController.m */; };
+		3A69EF732C654B8C00B3B86D /* VisionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A69EF712C654B8C00B3B86D /* VisionKit.framework */; };
+		3A69EF742C654B8C00B3B86D /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A69EF722C654B8C00B3B86D /* Vision.framework */; };
+		3A69EF7F2C655EEA00B3B86D /* QSViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69EF7E2C655EEA00B3B86D /* QSViewControllerRepresentable.swift */; };
+		3A69EF812C655F5800B3B86D /* QuickScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69EF802C655F5800B3B86D /* QuickScannerApp.swift */; };
+		3A69EF832C655F5F00B3B86D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69EF822C655F5F00B3B86D /* ContentView.swift */; };
+		3A69EF862C656EB000B3B86D /* QSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69EF852C656EB000B3B86D /* QSDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A69EF572C65425E00B3B86D /* QuickScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A69EF5A2C65425E00B3B86D /* QuickScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickScannerApp.swift; sourceTree = "<group>"; };
-		3A69EF5C2C65425E00B3B86D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A69EF5E2C65425F00B3B86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A69EF602C65425F00B3B86D /* QuickScanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickScanner.entitlements; sourceTree = "<group>"; };
 		3A69EF622C65425F00B3B86D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A69EF6D2C6547A200B3B86D /* QSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSViewController.m; sourceTree = "<group>"; };
+		3A69EF6F2C65483700B3B86D /* QSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSViewController.h; sourceTree = "<group>"; };
+		3A69EF712C654B8C00B3B86D /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/VisionKit.framework; sourceTree = DEVELOPER_DIR; };
+		3A69EF722C654B8C00B3B86D /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/Vision.framework; sourceTree = DEVELOPER_DIR; };
+		3A69EF752C654BA700B3B86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3A69EF7C2C655E2600B3B86D /* QuickScanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickScanner-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A69EF7E2C655EEA00B3B86D /* QSViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		3A69EF802C655F5800B3B86D /* QuickScannerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickScannerApp.swift; sourceTree = "<group>"; };
+		3A69EF822C655F5F00B3B86D /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A69EF842C656E8900B3B86D /* QSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSDetailViewController.h; sourceTree = "<group>"; };
+		3A69EF852C656EB000B3B86D /* QSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A69EF732C654B8C00B3B86D /* VisionKit.framework in Frameworks */,
+				3A69EF742C654B8C00B3B86D /* Vision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +54,7 @@
 			children = (
 				3A69EF592C65425E00B3B86D /* QuickScanner */,
 				3A69EF582C65425E00B3B86D /* Products */,
+				3A69EF702C654B8C00B3B86D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,8 +69,11 @@
 		3A69EF592C65425E00B3B86D /* QuickScanner */ = {
 			isa = PBXGroup;
 			children = (
-				3A69EF5A2C65425E00B3B86D /* QuickScannerApp.swift */,
-				3A69EF5C2C65425E00B3B86D /* ContentView.swift */,
+				3A69EF752C654BA700B3B86D /* Info.plist */,
+				3A69EF802C655F5800B3B86D /* QuickScannerApp.swift */,
+				3A69EF822C655F5F00B3B86D /* ContentView.swift */,
+				3A69EF7C2C655E2600B3B86D /* QuickScanner-Bridging-Header.h */,
+				3A69EF6C2C65468700B3B86D /* ViewController */,
 				3A69EF5E2C65425F00B3B86D /* Assets.xcassets */,
 				3A69EF602C65425F00B3B86D /* QuickScanner.entitlements */,
 				3A69EF612C65425F00B3B86D /* Preview Content */,
@@ -67,6 +87,27 @@
 				3A69EF622C65425F00B3B86D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3A69EF6C2C65468700B3B86D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3A69EF6F2C65483700B3B86D /* QSViewController.h */,
+				3A69EF7E2C655EEA00B3B86D /* QSViewControllerRepresentable.swift */,
+				3A69EF6D2C6547A200B3B86D /* QSViewController.m */,
+				3A69EF842C656E8900B3B86D /* QSDetailViewController.h */,
+				3A69EF852C656EB000B3B86D /* QSDetailViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3A69EF702C654B8C00B3B86D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A69EF722C654B8C00B3B86D /* Vision.framework */,
+				3A69EF712C654B8C00B3B86D /* VisionKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +142,7 @@
 				TargetAttributes = {
 					3A69EF562C65425E00B3B86D = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -139,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A69EF5D2C65425E00B3B86D /* ContentView.swift in Sources */,
-				3A69EF5B2C65425E00B3B86D /* QuickScannerApp.swift in Sources */,
+				3A69EF7F2C655EEA00B3B86D /* QSViewControllerRepresentable.swift in Sources */,
+				3A69EF832C655F5F00B3B86D /* ContentView.swift in Sources */,
+				3A69EF6E2C6547A200B3B86D /* QSViewController.m in Sources */,
+				3A69EF812C655F5800B3B86D /* QuickScannerApp.swift in Sources */,
+				3A69EF862C656EB000B3B86D /* QSDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QuickScanner/QuickScanner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -274,16 +320,26 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickScanner/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickScanner;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"1\"";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"2\"";
+				INFOPLIST_KEY_NSPrincipalClass = QSAppDelegate;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -291,11 +347,16 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marlhex.QuickScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "QuickScanner/QuickScanner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QuickScanner/QuickScanner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -312,16 +374,26 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickScanner/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickScanner;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"1\"";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"2\"";
+				INFOPLIST_KEY_NSPrincipalClass = QSAppDelegate;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -329,11 +401,15 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marlhex.QuickScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "QuickScanner/QuickScanner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
