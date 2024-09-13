@@ -314,7 +314,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QuickScanner/QuickScanner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"QuickScanner/Preview Content\"";
 				DEVELOPMENT_TEAM = 8N2TVY9NM7;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -323,7 +323,7 @@
 				INFOPLIST_FILE = QuickScanner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QuickScanner;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSCameraUsageDescription = "\"1\"";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to use the Camera for the scanner to detect the paper";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"2\"";
 				INFOPLIST_KEY_NSPrincipalClass = QSAppDelegate;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -368,7 +368,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QuickScanner/QuickScanner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"QuickScanner/Preview Content\"";
 				DEVELOPMENT_TEAM = 8N2TVY9NM7;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -377,7 +377,7 @@
 				INFOPLIST_FILE = QuickScanner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QuickScanner;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSCameraUsageDescription = "\"1\"";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to use the Camera for the scanner to detect the paper";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"2\"";
 				INFOPLIST_KEY_NSPrincipalClass = QSAppDelegate;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

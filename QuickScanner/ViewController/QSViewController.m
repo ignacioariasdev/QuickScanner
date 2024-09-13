@@ -8,6 +8,7 @@
 #import "QSViewController.h"
 #import "QSDetailViewController.h"
 #import <Photos/Photos.h>
+#import <Vision/Vision.h>
 
 @interface QSViewController ()
 
@@ -24,6 +25,7 @@
     [super viewDidLoad];
     self.scannedReceipts = [NSMutableArray array];
     [self setupUI];
+    [self checkPhotoLibraryPermission];
 }
 
 - (void)setupUI {
@@ -207,7 +209,40 @@
     return matches.count > 0;
 }
 
+- (void)checkPhotoLibraryPermission {
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    if (status == PHAuthorizationStatusNotDetermined) {
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (status != PHAuthorizationStatusAuthorized) {
+                    [self showPhotoLibraryPermissionAlert];
+                }
+            });
+        }];
+    } else if (status != PHAuthorizationStatusAuthorized) {
+        [self showPhotoLibraryPermissionAlert];
+    }
+}
+
+- (void)showPhotoLibraryPermissionAlert {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Photo Library Access Required"
+                                                                   message:@"This app needs access to save scanned receipts to your photo library. Please grant access in Settings."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *settingsAction = [UIAlertAction actionWithTitle:@"Settings" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:settingsAction];
+    [alert addAction:cancelAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 - (void)saveReceiptData:(NSDictionary *)receiptData withImage:(UIImage *)image {
+    // Save to app's document directory
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *documentDirectory = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
     NSURL *receiptFolder = [documentDirectory URLByAppendingPathComponent:@"Receipts" isDirectory:YES];
@@ -231,13 +266,25 @@
     
     [self.scannedReceipts addObject:fullReceiptData];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableView reloadData];
-        self.ocrPreviewLabel.text = [NSString stringWithFormat:@"Vendor: %@\nDate: %@\nTax: %@",
-                                     receiptData[@"vendor"] ?: @"N/A",
-                                     receiptData[@"date"] ?: @"N/A",
-                                     receiptData[@"tax"] ?: @"N/A"];
-    });
+    // Save to Photos app
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+        PHAssetChangeRequest *createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromImage:image];
+    } completionHandler:^(BOOL success, NSError *error) {
+        if (!success) {
+            NSLog(@"Error saving image to Photos: %@", error);
+        } else {
+            NSLog(@"Successfully saved image to Photos");
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+            self.ocrPreviewLabel.text = [NSString stringWithFormat:@"Vendor: %@\nTax: %@\nTotal: %@\nAddress: %@",
+                                         receiptData[@"vendor"] ?: @"N/A",
+                                         receiptData[@"tax"] ?: @"N/A",
+                                         receiptData[@"total"] ?: @"N/A",
+                                         receiptData[@"address"] ?: @"N/A"];
+        });
+    }];
 }
 
 #pragma mark - UITableViewDataSource
